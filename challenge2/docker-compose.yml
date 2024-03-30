@@ -10,7 +10,5 @@ services:
       - node_app
   node_app:
     build: .
-    ports:
-      - "3000:3000"
     volumes:
-      - .:/app
+      - .:/usr/src/app
