@@ -62,18 +62,16 @@ In this challenge, my objective was to create a dynamic Node.js application with
 6. To test the application, I opened a web browser and navigated to `http://localhost:8080/api/books`, which should display a JSON response with a list of books.
 7. If any service didn't run as expected, I made necessary adjustments, tested again, and verified the correct response.
 8. Once confirmed working, I committed the Dockerfile and `docker-compose.yml` to the remote repository.
-9. I captured screenshots showing the running services and the successful browser output as proof.
 
 ### Expected Outcomes
 
 - A successful request to `http://localhost:8080/api/books` would return a JSON response with all the book entries.
 - For a specific book, a request to `http://localhost:8080/api/books/1` would return the details for that specific book.
-- The `proof.png` image was used to document the successful output.
-
-### Conclusion
-
-The dynamic Node.js application was successfully dockerized, and the endpoints were correctly exposed and accessible through NGINX acting as a reverse proxy. The Docker Compose tool orchestrated both services seamlessly. All steps and outcomes were documented and validated with screenshots, and the repository's URL was submitted along with the required documentation on D2L.
 
 ### Problems
 
 A lot of the problems I had with this were because of incorrect directory. I was having troubles displaying the api but after troubleshooting I was able to correctly direct it and display the expected outcome of the authors, book, id, and title.
+
+### Conclusion
+
+The dynamic Node.js application was successfully dockerized, and the endpoints were correctly exposed and accessible through NGINX. The Docker Compose tool used both services . All steps and outcomes were documented and validated and the repository's URL was submitted along with the required documentation on D2L.
