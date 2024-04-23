@@ -75,3 +75,55 @@ A lot of the problems I had with this were because of incorrect directory. I was
 ### Conclusion
 
 The dynamic Node.js application was successfully dockerized, and the endpoints were correctly exposed and accessible through NGINX. The Docker Compose tool used both services . All steps and outcomes were documented and validated and the repository's URL was submitted along with the required documentation on D2L.
+
+## Challenge 3 Walkthrough: Full Stack Application Integration with Docker
+
+### Getting Started
+
+- I thoroughly went through the Dockerfiles and `nginx.conf` provided a got a clear understanding of the service changes required.
+
+### Crafting the Docker Compose
+
+- With insights in hand, I crafted a `docker-compose.yml` file specialized to bridge our Nginx web server, Node.js API, and MariaDB database services.
+
+### Overcoming Docker Setup Challenges
+
+- Setting up Docker revealed conflicts and misconfigurations, leading to a cycle of testing, debugging, and revising.
+
+### Refinement and Execution
+
+- After tweaking environment variables and ensuring proper path configurations as the main problem as well as setting up database information, I executed `docker-compose up --build`. This step was crucial for rebuilding the Docker environment from scratch, ensuring a clean state free of prior conflicts.
+
+### Launch and Verification
+
+- Post-rebuild, the successful launch was confirmed by accessing `localhost:8080/api/books` and `localhost:8080/api/books/1`, which served the anticipated data responses.
+
+### Documentation and Evidence
+
+- I concluded by capturing terminal screenshots and browser results, thoroughly documenting the successful execution of Challenge 3 for submission.
+
+## Challenge 4 Walkthrough: Scaling Up Node Services with Docker
+
+I copied the challenge 3 folder in order to start challenge 4. I just researched the commands needed to do this step.
+
+### Confirming Single Instance Operation
+
+- Started by confirming the single `node-service` instance via GET requests to `http://localhost:8080/api/stats`, noting the consistent hostname in responses.
+
+### Scaling Up the Service
+
+- Researched and implemented the Docker Compose command to scale the `node-service`.
+- Executed `docker-compose up -d --scale node-service=3` to initiate three instances of `node-service`.
+
+### Observing Load Distribution
+
+- Post-scaling, varied hostnames in the `api/stats` endpoint responses indicated successful load distribution across multiple instances.
+
+### Validation and Documentation
+
+- Confirmed the active instances by executing `docker-compose ps`, showcasing all three running instances.
+- Conducted repetitive system testing to demonstrate effective load-balancing.
+
+### Evidence of Success
+
+- Documented the entire process with terminal screenshots and results, finishing the challenge.
